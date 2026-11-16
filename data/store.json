@@ -1,0 +1,1416 @@
+{
+  "schemaVersion": 6,
+  "settings": {
+    "businessName": "Mr Ashraf Banking Traveling Communication",
+    "ownerName": "Mr. Ashraf",
+    "ownerWhatsapp": "918755106587",
+    "supportEmail": "desk@mrashrafbtc.example",
+    "officeAddress": "Main Citizen Banking & Travel Counter, Market Road",
+    "currencySymbol": "₹",
+    "platformChargePercent": 20,
+    "upiId": "8755106587@ptsbi",
+    "upiPayeeName": "MR ASHRAF BANKING TRAVELING COMMUNICATION",
+    "bankDetails": "SBI / HDFC · A/C 50200048192014 · IFSC HDFC0001204",
+    "ownerPasscode": "Ashraful786$"
+  },
+  "services": [
+    {
+      "id": "srv-aadhaar",
+      "categoryKey": "identity_certificates",
+      "categoryTitle": "Identity & Certificates",
+      "categoryTitleHi": "पहचान और प्रमाण पत्र",
+      "name": "Aadhaar Card (Enrollment, Update & Mobile/Address Link)",
+      "nameHi": "आधार कार्ड (नामांकन, अपडेट, और मोबाइल/पता लिंक)",
+      "description": "New Aadhaar enrollment slot, demographic/address update, or mobile number linking assistance.",
+      "originalFee": 100,
+      "expressAddonFee": 50,
+      "turnaroundStandard": "3–5 Working Days",
+      "turnaroundExpress": "Same Day Filing",
+      "requiredHints": [
+        "12-Digit Aadhaar / Enrolment No.",
+        "Update Type",
+        "Mobile Number"
+      ],
+      "customFields": [
+        {
+          "key": "Update Type",
+          "label": "Aadhaar Service Type",
+          "placeholder": "Select service type",
+          "type": "select",
+          "options": [
+            "New Enrollment",
+            "Address Update",
+            "Mobile Number Link",
+            "Name / DOB Correction",
+            "Biometric Update"
+          ],
+          "required": true
+        },
+        {
+          "key": "Aadhaar / EID Number",
+          "label": "Aadhaar Number (or EID for New)",
+          "placeholder": "e.g. XXXX-XXXX-4821 or New",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Father / Husband Name",
+          "label": "Father / Guardian Name",
+          "placeholder": "Full guardian name as per document",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Supporting Proof",
+          "label": "Supporting Document Name",
+          "placeholder": "e.g. Voter ID / Electricity Bill / Birth Certificate",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Birth",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-pan",
+      "categoryKey": "identity_certificates",
+      "categoryTitle": "Identity & Certificates",
+      "categoryTitleHi": "पहचान और प्रमाण पत्र",
+      "name": "PAN Card (New Application & Correction)",
+      "nameHi": "पैन कार्ड (नया आवेदन और सुधार)",
+      "description": "NSDL / UTIITSL new PAN 49A filing, name/DOB correction, or lost PAN card reprint.",
+      "originalFee": 150,
+      "expressAddonFee": 60,
+      "turnaroundStandard": "5–7 Working Days",
+      "turnaroundExpress": "Priority E-PAN Filing",
+      "requiredHints": [
+        "Application Type",
+        "Father Name & DOB",
+        "Aadhaar Number"
+      ],
+      "customFields": [
+        {
+          "key": "PAN Application Type",
+          "label": "Application Type",
+          "placeholder": "Select type",
+          "type": "select",
+          "options": [
+            "New PAN Card (Form 49A)",
+            "PAN Correction / Update",
+            "Lost / Reprint PAN Card"
+          ],
+          "required": true
+        },
+        {
+          "key": "Existing PAN (if any)",
+          "label": "Existing PAN Number (for Correction/Reprint)",
+          "placeholder": "e.g. ABCDE1234F or N/A",
+          "type": "text"
+        },
+        {
+          "key": "Date of Birth",
+          "label": "Applicant Date of Birth",
+          "placeholder": "YYYY-MM-DD",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "Father Name",
+          "label": "Father Full Name (for Card Print)",
+          "placeholder": "First Middle Last Name",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Birth",
+        "Proof of Address",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-voter-id",
+      "categoryKey": "identity_certificates",
+      "categoryTitle": "Identity & Certificates",
+      "categoryTitleHi": "पहचान और प्रमाण पत्र",
+      "name": "Voter ID Card (New Form-6 / Correction Form-8)",
+      "nameHi": "मतदाता पहचान पत्र (Voter ID - नया/सुधार)",
+      "description": "New voter registration (Form 6), constituency transfer, or photo/address correction (Form 8).",
+      "originalFee": 100,
+      "expressAddonFee": 40,
+      "turnaroundStandard": "7–14 Working Days",
+      "turnaroundExpress": "Same Day Portal Filing",
+      "requiredHints": [
+        "Form Type",
+        "Assembly Constituency",
+        "EPIC Number (if correction)"
+      ],
+      "customFields": [
+        {
+          "key": "Voter Service",
+          "label": "Voter ID Request Type",
+          "placeholder": "Select type",
+          "type": "select",
+          "options": [
+            "New Voter Registration (Form 6)",
+            "Correction / Address Shift (Form 8)",
+            "EPIC Card Download & Print"
+          ],
+          "required": true
+        },
+        {
+          "key": "EPIC Number",
+          "label": "Existing EPIC / Voter No. (if applicable)",
+          "placeholder": "e.g. WB/12/094/112233 or New",
+          "type": "text"
+        },
+        {
+          "key": "Assembly / Booth",
+          "label": "Assembly Constituency / Booth Name",
+          "placeholder": "e.g. Ward 14 / Central Booth",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Birth",
+        "Proof of Residence",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-certificates",
+      "categoryKey": "identity_certificates",
+      "categoryTitle": "Identity & Certificates",
+      "categoryTitleHi": "पहचान और प्रमाण पत्र",
+      "name": "Birth, Death, Income, Caste & Residence Certificate",
+      "nameHi": "जन्म, मृत्यु, आय, जाति, और निवास प्रमाण पत्र",
+      "description": "e-District state portal filing, physical attestation prep, and verified government certificate processing.",
+      "originalFee": 200,
+      "expressAddonFee": 80,
+      "turnaroundStandard": "5–10 Working Days",
+      "turnaroundExpress": "Priority Desk Verification",
+      "requiredHints": [
+        "Certificate Type",
+        "Block / Tehsil",
+        "Annual Income / Category"
+      ],
+      "customFields": [
+        {
+          "key": "Certificate Type",
+          "label": "Certificate Category",
+          "placeholder": "Select certificate",
+          "type": "select",
+          "options": [
+            "Income Certificate (आय)",
+            "Caste Certificate (जाति)",
+            "Residence / Domicile (निवास)",
+            "Birth Certificate (जन्म)",
+            "Death Certificate (मृत्यु)"
+          ],
+          "required": true
+        },
+        {
+          "key": "Tehsil / Block",
+          "label": "Block / Tehsil / Municipality",
+          "placeholder": "Enter Block or Tehsil name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Parent / Spouse Name",
+          "label": "Father / Mother / Spouse Name",
+          "placeholder": "Full name for certificate record",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Purpose / Income Figure",
+          "label": "Purpose (or Annual Income if Income Cert)",
+          "placeholder": "e.g. Scholarship / ₹96,000 per year",
+          "type": "text"
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Birth",
+        "Proof of Caste",
+        "Proof of Income",
+        "Proof of Residence",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-eshram-ration",
+      "categoryKey": "identity_certificates",
+      "categoryTitle": "Identity & Certificates",
+      "categoryTitleHi": "पहचान और प्रमाण पत्र",
+      "name": "e-Shram Card & Ration Card Services",
+      "nameHi": "ई-श्रम (e-Shram) कार्ड और राशन कार्ड सेवाएं",
+      "description": "Unorganized worker e-Shram UAN registration, Ration card member addition, e-KYC, or PVC card print.",
+      "originalFee": 100,
+      "expressAddonFee": 40,
+      "turnaroundStandard": "2–4 Working Days",
+      "turnaroundExpress": "Same Day Card Print",
+      "requiredHints": [
+        "Card Type",
+        "Family Head / Occupation",
+        "Bank IFSC / Ration No."
+      ],
+      "customFields": [
+        {
+          "key": "Service Option",
+          "label": "Select e-Shram / Ration Service",
+          "placeholder": "Select service",
+          "type": "select",
+          "options": [
+            "New e-Shram Card",
+            "e-Shram Profile Update",
+            "New Ration Card Filing",
+            "Ration Card Member Add / e-KYC"
+          ],
+          "required": true
+        },
+        {
+          "key": "Occupation / Family Members",
+          "label": "Primary Occupation or Family Member Count",
+          "placeholder": "e.g. Mason / 4 Family Members",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Existing Card Number",
+          "label": "Existing Ration / UAN Number (if any)",
+          "placeholder": "Card number or N/A",
+          "type": "text"
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of National Card",
+        "Proof of Income",
+        "Applicant Photo (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-aeps-banking",
+      "categoryKey": "banking_finance",
+      "categoryTitle": "Banking & Financial Services",
+      "categoryTitleHi": "बैंकिंग और वित्तीय सेवाएं",
+      "name": "Bank Account Opening, AEPS Cash & Money Transfer",
+      "nameHi": "बैंक खाता खोलना, नकद निकासी (AEPS), और मनी ट्रांसफर",
+      "description": "CSP bank account opening, Aadhaar Enabled Payment (AEPS) settlement, and domestic money transfer.",
+      "originalFee": 100,
+      "expressAddonFee": 30,
+      "turnaroundStandard": "Same Day Counter",
+      "turnaroundExpress": "Immediate Desk Priority",
+      "requiredHints": [
+        "Transaction / Account Type",
+        "Bank Name",
+        "Beneficiary Details"
+      ],
+      "customFields": [
+        {
+          "key": "Banking Service Type",
+          "label": "Banking Operation",
+          "placeholder": "Select banking service",
+          "type": "select",
+          "options": [
+            "New Bank Account Opening",
+            "AEPS Cash Withdrawal / Balance Desk",
+            "Domestic Money Transfer (DMT)"
+          ],
+          "required": true
+        },
+        {
+          "key": "Bank Name",
+          "label": "Bank Name",
+          "placeholder": "e.g. SBI / HDFC / Bank of Baroda / India Post",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Account / Transfer Amount",
+          "label": "Transfer / Deposit Amount & Last 4 Digits (if applicable)",
+          "placeholder": "e.g. ₹5,000 transfer to A/C ending 4421",
+          "type": "text"
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of National Card",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-micro-atm",
+      "categoryKey": "banking_finance",
+      "categoryTitle": "Banking & Financial Services",
+      "categoryTitleHi": "बैंकिंग और वित्तीय सेवाएं",
+      "name": "Micro ATM Card Desk Service",
+      "nameHi": "माइक्रो एटीएम (Micro ATM)",
+      "description": "Debit card swipe withdrawal, mini statement receipt, and assisted Micro ATM counter settlement.",
+      "originalFee": 50,
+      "expressAddonFee": 25,
+      "turnaroundStandard": "Instant Counter Slot",
+      "turnaroundExpress": "Priority Home / Desk Visit",
+      "requiredHints": [
+        "Bank / Card Network",
+        "Transaction Type",
+        "Amount"
+      ],
+      "customFields": [
+        {
+          "key": "Micro ATM Request",
+          "label": "Service Type",
+          "placeholder": "Select option",
+          "type": "select",
+          "options": [
+            "Cash Withdrawal Slot",
+            "Mini Statement & Balance Print",
+            "Doorstep Micro ATM Visit"
+          ],
+          "required": true
+        },
+        {
+          "key": "Bank & Card Type",
+          "label": "Bank & Card Network",
+          "placeholder": "e.g. SBI RuPay / HDFC Visa",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of National Card"
+      ]
+    },
+    {
+      "id": "srv-jeevan-pramaan",
+      "categoryKey": "banking_finance",
+      "categoryTitle": "Banking & Financial Services",
+      "categoryTitleHi": "बैंकिंग और वित्तीय सेवाएं",
+      "name": "Jeevan Pramaan (Pensioners Life Certificate)",
+      "nameHi": "जीवन प्रमाण (Pensioners Life Certificate)",
+      "description": "Digital Life Certificate biometric filing and printed Pramaan ID slip for Central/State pensioners.",
+      "originalFee": 100,
+      "expressAddonFee": 50,
+      "turnaroundStandard": "Same Day",
+      "turnaroundExpress": "Home Biometric Visit",
+      "requiredHints": [
+        "PPO Number",
+        "Pension Disbursing Bank",
+        "Aadhaar Number"
+      ],
+      "customFields": [
+        {
+          "key": "PPO Number",
+          "label": "PPO (Pension Payment Order) Number",
+          "placeholder": "Enter full PPO number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Sanctioning Authority",
+          "label": "Pension Type / Department",
+          "placeholder": "e.g. Central Govt / Defence / State / EPFO",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Pension Bank & Account",
+          "label": "Disbursing Bank & Account Last 4 Digits",
+          "placeholder": "e.g. SBI · A/C ending 8820",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of National Card",
+        "Applicant Photo (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-insurance-pension",
+      "categoryKey": "banking_finance",
+      "categoryTitle": "Banking & Financial Services",
+      "categoryTitleHi": "बैंकिंग और वित्तीय सेवाएं",
+      "name": "Insurance & Pension Schemes (PM-SYM, NPS, APY)",
+      "nameHi": "बीमा (Insurance) और पेंशन योजनाएं (PM-SYM, NPS, APY)",
+      "description": "Enrollment & policy renewal for PM-SYM, Atal Pension Yojana (APY), NPS, PMSBY, PMJJBY & vehicle insurance.",
+      "originalFee": 150,
+      "expressAddonFee": 50,
+      "turnaroundStandard": "1–2 Working Days",
+      "turnaroundExpress": "Same Day Policy Slip",
+      "requiredHints": [
+        "Scheme / Insurance Name",
+        "Nominee Details",
+        "Age / DOB"
+      ],
+      "customFields": [
+        {
+          "key": "Scheme / Policy Type",
+          "label": "Select Scheme or Insurance",
+          "placeholder": "Select scheme",
+          "type": "select",
+          "options": [
+            "PM-SYM (Shram Yogi Maandhan)",
+            "Atal Pension Yojana (APY)",
+            "NPS Registration",
+            "PMJJBY / PMSBY Life & Accident",
+            "Motor / Health Insurance Renewal"
+          ],
+          "required": true
+        },
+        {
+          "key": "Nominee Name & Relation",
+          "label": "Nominee Full Name & Relationship",
+          "placeholder": "e.g. Sunita Devi (Spouse)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Applicant DOB",
+          "label": "Applicant Date of Birth",
+          "placeholder": "YYYY-MM-DD",
+          "type": "date",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Birth",
+        "Proof of Address",
+        "Proof of National Card",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-itr-gst",
+      "categoryKey": "banking_finance",
+      "categoryTitle": "Banking & Financial Services",
+      "categoryTitleHi": "बैंकिंग और वित्तीय सेवाएं",
+      "name": "Income Tax (ITR) Filing & GST Services",
+      "nameHi": "आयकर (Income Tax) फाइलिंग और GST सेवाएं",
+      "description": "ITR-1/2/3/4 e-filing, TDS verification, New GST Registration, and Monthly/Quarterly GSTR filing.",
+      "originalFee": 500,
+      "expressAddonFee": 200,
+      "turnaroundStandard": "2–3 Working Days",
+      "turnaroundExpress": "Same Day Filing & Ack",
+      "requiredHints": [
+        "PAN / GSTIN",
+        "Assessment Year / Month",
+        "Income / Business Type"
+      ],
+      "customFields": [
+        {
+          "key": "Tax Service Type",
+          "label": "ITR or GST Service",
+          "placeholder": "Select service",
+          "type": "select",
+          "options": [
+            "Income Tax Return (ITR Filing)",
+            "New GST Registration",
+            "GST Monthly/Quarterly Return (GSTR-1/3B)",
+            "PAN-Aadhaar Link / Tax Notice Reply"
+          ],
+          "required": true
+        },
+        {
+          "key": "PAN / GSTIN",
+          "label": "PAN Number / GSTIN",
+          "placeholder": "e.g. ABCDE1234F or 27ABCDE1234F1Z5",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Assessment Period",
+          "label": "Assessment Year / Return Month",
+          "placeholder": "e.g. AY 2026-27 or Oct 2026",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Income",
+        "Proof of National Card",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-pm-kisan",
+      "categoryKey": "govt_schemes",
+      "categoryTitle": "Government Schemes",
+      "categoryTitleHi": "सरकारी योजनाएं",
+      "name": "PM Kisan Samman Nidhi (New, e-KYC & Status Check)",
+      "nameHi": "पीएम किसान सम्मान निधि (PM Kisan)",
+      "description": "New farmer registration, biometric/OTP e-KYC, land seeding verification, and installment status resolution.",
+      "originalFee": 100,
+      "expressAddonFee": 40,
+      "turnaroundStandard": "1–2 Working Days",
+      "turnaroundExpress": "Same Day e-KYC & Print",
+      "requiredHints": [
+        "PM Kisan Reg / Aadhaar",
+        "Khata / Khasra Number",
+        "Bank Account Seeded"
+      ],
+      "customFields": [
+        {
+          "key": "PM Kisan Service",
+          "label": "PM Kisan Action Needed",
+          "placeholder": "Select action",
+          "type": "select",
+          "options": [
+            "New Farmer Registration",
+            "PM Kisan e-KYC & Land Seeding",
+            "Beneficiary Status & Installment Correction"
+          ],
+          "required": true
+        },
+        {
+          "key": "Land Khata / Plot No.",
+          "label": "Land Khata / Khasra / Plot Number",
+          "placeholder": "e.g. Khata 114 / Plot 892",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Aadhaar Last 4 Digits",
+          "label": "Farmer Aadhaar Last 4 Digits",
+          "placeholder": "e.g. 4821",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Residence",
+        "Proof of National Card",
+        "Applicant Photo (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-ayushman-bharat",
+      "categoryKey": "govt_schemes",
+      "categoryTitle": "Government Schemes",
+      "categoryTitleHi": "सरकारी योजनाएं",
+      "name": "Ayushman Bharat / Golden Card (PM-JAY)",
+      "nameHi": "आयुष्मान भारत (Ayushman Bharat / Golden Card)",
+      "description": "PM-JAY eligibility verification, e-KYC card generation, family member link, and PVC Golden Card print.",
+      "originalFee": 100,
+      "expressAddonFee": 40,
+      "turnaroundStandard": "1–2 Working Days",
+      "turnaroundExpress": "Same Day Card Print",
+      "requiredHints": [
+        "Ration / PMJAY ID",
+        "Aadhaar Number",
+        "Family Member Count"
+      ],
+      "customFields": [
+        {
+          "key": "Ayushman Request",
+          "label": "Ayushman Card Request Type",
+          "placeholder": "Select request",
+          "type": "select",
+          "options": [
+            "Eligibility Check & New Golden Card",
+            "Add Family Member in PM-JAY",
+            "Download & Laminated Card Print"
+          ],
+          "required": true
+        },
+        {
+          "key": "Ration / HHID Number",
+          "label": "Ration Card / Family HHID Number",
+          "placeholder": "Enter Ration or PM-JAY Family ID",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Residence",
+        "Proof of National Card",
+        "Applicant Photo (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-pmay",
+      "categoryKey": "govt_schemes",
+      "categoryTitle": "Government Schemes",
+      "categoryTitleHi": "सरकारी योजनाएं",
+      "name": "Pradhan Mantri Awas Yojana (PMAY Urban / Gramin)",
+      "nameHi": "प्रधानमंत्री आवास योजना (PMAY)",
+      "description": "PMAY housing application, beneficiary list verification, geo-tag status update, and subsidy tracking.",
+      "originalFee": 150,
+      "expressAddonFee": 50,
+      "turnaroundStandard": "2–3 Working Days",
+      "turnaroundExpress": "Same Day Portal Filing",
+      "requiredHints": [
+        "PMAY Area (Urban/Gramin)",
+        "Aadhaar & Family Income",
+        "Bank Account Details"
+      ],
+      "customFields": [
+        {
+          "key": "PMAY Category",
+          "label": "PMAY Scheme Type",
+          "placeholder": "Select category",
+          "type": "select",
+          "options": [
+            "PMAY-G (Gramin / Rural)",
+            "PMAY-U (Urban)",
+            "Beneficiary Status & Installment Check"
+          ],
+          "required": true
+        },
+        {
+          "key": "Ward / Gram Panchayat",
+          "label": "Gram Panchayat / Municipal Ward",
+          "placeholder": "Enter Panchayat or Ward name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Annual Household Income",
+          "label": "Annual Family Income",
+          "placeholder": "e.g. ₹1,20,000",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Income",
+        "Proof of Residence",
+        "Proof of Caste",
+        "Applicant Photo (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-tele-law-med",
+      "categoryKey": "govt_schemes",
+      "categoryTitle": "Government Schemes",
+      "categoryTitleHi": "सरकारी योजनाएं",
+      "name": "Tele-Law Legal Consultation & Tele-Medicine Slot",
+      "nameHi": "टेली-लॉ (Tele-Law) और टेली-मेडिसिन (Tele-medicine)",
+      "description": "Schedule video consultation with Panel Advocates (Tele-Law) or Certified Doctors (e-Sanjeevani / Tele-Medicine).",
+      "originalFee": 100,
+      "expressAddonFee": 50,
+      "turnaroundStandard": "Next Available Slot (24h)",
+      "turnaroundExpress": "Priority Same-Day Call",
+      "requiredHints": [
+        "Consultation Type",
+        "Brief Concern / Case Note",
+        "Preferred Time Slot"
+      ],
+      "customFields": [
+        {
+          "key": "Consultation Mode",
+          "label": "Select Consultation Service",
+          "placeholder": "Select service",
+          "type": "select",
+          "options": [
+            "Tele-Law (Advocate Legal Advice)",
+            "Tele-Medicine (Doctor Consultation)"
+          ],
+          "required": true
+        },
+        {
+          "key": "Preferred Time Window",
+          "label": "Preferred Consultation Window",
+          "placeholder": "Select slot",
+          "type": "select",
+          "options": [
+            "Morning (10 AM – 1 PM)",
+            "Afternoon (2 PM – 5 PM)",
+            "Evening (5 PM – 7 PM)"
+          ],
+          "required": true
+        },
+        {
+          "key": "Case / Symptom Summary",
+          "label": "Brief Legal Matter or Health Concern",
+          "placeholder": "Describe briefly for case registration",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Disability",
+        "Proof of Residence"
+      ]
+    },
+    {
+      "id": "srv-govt-job",
+      "categoryKey": "education_jobs",
+      "categoryTitle": "Education & Jobs",
+      "categoryTitleHi": "शिक्षा और रोजगार",
+      "name": "Government Job Online Application (SSC, UPSC, Railway, State)",
+      "nameHi": "सरकारी नौकरी (Govt Job) के आवेदन",
+      "description": "Accurate online form submission, photo/signature resizing, category certificate upload, and admit/ack slip.",
+      "originalFee": 150,
+      "expressAddonFee": 60,
+      "turnaroundStandard": "Same Day Filing",
+      "turnaroundExpress": "Immediate Deadline Priority",
+      "requiredHints": [
+        "Exam / Vacancy Name",
+        "Highest Qualification",
+        "Category (Gen/OBC/SC/ST)"
+      ],
+      "customFields": [
+        {
+          "key": "Recruitment / Vacancy Name",
+          "label": "Department & Post Name",
+          "placeholder": "e.g. SSC CGL / RRB NTPC / Police Constable",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Category & Qualification",
+          "label": "Category & Highest Qualification",
+          "placeholder": "e.g. OBC-NCL · Graduate (B.Sc)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Application Deadline",
+          "label": "Last Date of Form",
+          "placeholder": "YYYY-MM-DD",
+          "type": "date",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Birth",
+        "Proof of Caste",
+        "Proof of Disability",
+        "Proof of Residence",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-exam-nios-ignou",
+      "categoryKey": "education_jobs",
+      "categoryTitle": "Education & Jobs",
+      "categoryTitleHi": "शिक्षा और रोजगार",
+      "name": "Exam Forms, NIOS & IGNOU Registration / Assignment",
+      "nameHi": "परीक्षा फॉर्म, NIOS, और IGNOU पंजीकरण",
+      "description": "NIOS 10th/12th admission & TMA upload, IGNOU fresh admission / re-registration, and university exam forms.",
+      "originalFee": 250,
+      "expressAddonFee": 80,
+      "turnaroundStandard": "1–2 Working Days",
+      "turnaroundExpress": "Same Day Submission",
+      "requiredHints": [
+        "Board / University",
+        "Course / Stream",
+        "Enrollment Number (if any)"
+      ],
+      "customFields": [
+        {
+          "key": "Institution / Portal",
+          "label": "Board / University Type",
+          "placeholder": "Select option",
+          "type": "select",
+          "options": [
+            "NIOS Admission / Exam Form",
+            "IGNOU Admission / Re-Registration",
+            "University / Competitive Exam Form"
+          ],
+          "required": true
+        },
+        {
+          "key": "Course & Subjects",
+          "label": "Program / Class & Subject Codes",
+          "placeholder": "e.g. IGNOU BAG Semester 3 or NIOS 12th Arts",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Enrollment / Reg No.",
+          "label": "Existing Enrollment No. (if re-registration)",
+          "placeholder": "Enrollment number or New Admission",
+          "type": "text"
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Birth",
+        "Proof of Nationality",
+        "Proof of Caste",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-scholarship",
+      "categoryKey": "education_jobs",
+      "categoryTitle": "Education & Jobs",
+      "categoryTitleHi": "शिक्षा और रोजगार",
+      "name": "Scholarship Registration (NSP & State Portals)",
+      "nameHi": "छात्रवृत्ति (Scholarship) पंजीकरण",
+      "description": "National Scholarship Portal (NSP) & State Pre/Post-Matric scholarship fresh or renewal form with institute verification slip.",
+      "originalFee": 150,
+      "expressAddonFee": 50,
+      "turnaroundStandard": "1–2 Working Days",
+      "turnaroundExpress": "Same Day Filing",
+      "requiredHints": [
+        "Scholarship Portal",
+        "School / College Name",
+        "Annual Family Income"
+      ],
+      "customFields": [
+        {
+          "key": "Scholarship Portal",
+          "label": "Portal & Type",
+          "placeholder": "Select option",
+          "type": "select",
+          "options": [
+            "NSP Fresh Application",
+            "NSP Renewal",
+            "State Post-Matric Scholarship",
+            "Minority / Merit Scholarship"
+          ],
+          "required": true
+        },
+        {
+          "key": "Institute & Class",
+          "label": "School / College Name & Current Class/Year",
+          "placeholder": "e.g. City Degree College · B.A. 2nd Year",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Previous Exam Percentage",
+          "label": "Last Passed Exam Marks %",
+          "placeholder": "e.g. 78.5%",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Income",
+        "Proof of Caste",
+        "Proof of Residence",
+        "Proof of Disability",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-fssai-msme",
+      "categoryKey": "business_travel",
+      "categoryTitle": "Business & Travel",
+      "categoryTitleHi": "व्यापार, यात्रा और अन्य सेवाएं",
+      "name": "FSSAI (FoSCoS) Food License & MSME Udyam Registration",
+      "nameHi": "FSSAI (Foscos) लाइसेंस और MSME पंजीकरण",
+      "description": "Official FoSCoS food business registration/renewal and MSME Udyam certificate with NIC activity code mapping.",
+      "originalFee": 500,
+      "expressAddonFee": 200,
+      "turnaroundStandard": "2–4 Working Days",
+      "turnaroundExpress": "Same Day Filing & Receipt",
+      "requiredHints": [
+        "Business / Shop Name",
+        "License Type",
+        "Nature of Business"
+      ],
+      "customFields": [
+        {
+          "key": "Registration Type",
+          "label": "License / Registration Needed",
+          "placeholder": "Select option",
+          "type": "select",
+          "options": [
+            "FSSAI Basic Registration (FoSCoS)",
+            "FSSAI State License / Renewal",
+            "MSME Udyam Registration",
+            "Both FSSAI + MSME Combo"
+          ],
+          "required": true
+        },
+        {
+          "key": "Business / Trade Name",
+          "label": "Shop / Enterprise Legal Name",
+          "placeholder": "e.g. Annapurna Foods & Traders",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Business Activity & Turnover",
+          "label": "Business Activity & Annual Turnover Est.",
+          "placeholder": "e.g. Grocery Retail / Dairy · Under ₹12 Lakh",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Residence",
+        "Proof of National Card",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-irctc-flight",
+      "categoryKey": "business_travel",
+      "categoryTitle": "Business & Travel",
+      "categoryTitleHi": "व्यापार, यात्रा और अन्य सेवाएं",
+      "name": "IRCTC Train & Flight Ticket Booking",
+      "nameHi": "IRCTC ट्रेन और फ्लाइट टिकट बुकिंग",
+      "description": "Authorized CSC IRCTC railway e-ticket (General / Tatkal slot) and domestic/international flight booking with confirmed itinerary slip.",
+      "originalFee": 200,
+      "expressAddonFee": 100,
+      "turnaroundStandard": "Instant / Same Day",
+      "turnaroundExpress": "Tatkal / Priority Desk Slot",
+      "requiredHints": [
+        "From & To Station/Airport",
+        "Travel Date & Class",
+        "Passenger Count & Ages"
+      ],
+      "customFields": [
+        {
+          "key": "Travel Mode",
+          "label": "Booking Type",
+          "placeholder": "Select mode",
+          "type": "select",
+          "options": [
+            "IRCTC Train Ticket (General)",
+            "IRCTC Tatkal Train Ticket",
+            "Domestic Flight Ticket",
+            "International Flight Ticket"
+          ],
+          "required": true
+        },
+        {
+          "key": "Route (From -> To)",
+          "label": "Origin & Destination Station / Airport",
+          "placeholder": "e.g. Howrah (HWH) to New Delhi (NDLS)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Journey Date & Class",
+          "label": "Journey Date & Preferred Class",
+          "placeholder": "e.g. 2026-11-22 · 3AC / Economy",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Passenger Names & Ages",
+          "label": "Passenger Names, Age & Gender",
+          "placeholder": "e.g. Amit Das (34 M), Priya Das (30 F)",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Nationality",
+        "Proof of National Card"
+      ]
+    },
+    {
+      "id": "srv-land-records",
+      "categoryKey": "business_travel",
+      "categoryTitle": "Business & Travel",
+      "categoryTitleHi": "व्यापार, यात्रा और अन्य सेवाएं",
+      "name": "Land Records / Banglarbhumi ROR & Mutation",
+      "nameHi": "भूमि अभिलेख (Land Records / Banglarbhumi ROR)",
+      "description": "Certified Khatian / Dag ROR (Porcha) extract, plot map, mutation application, and land revenue receipt processing.",
+      "originalFee": 200,
+      "expressAddonFee": 80,
+      "turnaroundStandard": "1–2 Working Days",
+      "turnaroundExpress": "Same Day Certified Print",
+      "requiredHints": [
+        "District & Block/Mouza",
+        "Khatian & Dag/Plot Number",
+        "Record Type"
+      ],
+      "customFields": [
+        {
+          "key": "Land Record Service",
+          "label": "Land Service Required",
+          "placeholder": "Select option",
+          "type": "select",
+          "options": [
+            "ROR / Khatian Certified Copy (Porcha)",
+            "Plot / Dag Information & Map",
+            "Land Mutation / Conversion Filing",
+            "Land Revenue (Khajna) Payment"
+          ],
+          "required": true
+        },
+        {
+          "key": "District / Block / Mouza",
+          "label": "District, Block & Mouza Name (JL No.)",
+          "placeholder": "e.g. North 24 Parganas · Barasat · Mouza 42",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "Khatian / Plot Number",
+          "label": "Khatian No. & Dag / Plot No.",
+          "placeholder": "e.g. Khatian 1042 · Dag 318",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Residence",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    },
+    {
+      "id": "srv-dsc",
+      "categoryKey": "business_travel",
+      "categoryTitle": "Business & Travel",
+      "categoryTitleHi": "व्यापार, यात्रा और अन्य सेवाएं",
+      "name": "Digital Signature Certificate (Class-3 DSC + USB Token)",
+      "nameHi": "डिजिटल हस्ताक्षर (Digital Signature - DSC)",
+      "description": "Class-3 Individual or Organization DSC (2-Year Validity) for e-Tender, MCA, GST, Income Tax & EPFO with physical USB token.",
+      "originalFee": 1200,
+      "expressAddonFee": 300,
+      "turnaroundStandard": "1–2 Working Days",
+      "turnaroundExpress": "Same Day Video KYC & Token",
+      "requiredHints": [
+        "DSC Class & Validity",
+        "PAN & Organization Name",
+        "Token Requirement"
+      ],
+      "customFields": [
+        {
+          "key": "DSC Type",
+          "label": "DSC Certificate Type",
+          "placeholder": "Select DSC type",
+          "type": "select",
+          "options": [
+            "Class-3 Signing Only (2 Years)",
+            "Class-3 Signing + Encryption Combo (2 Years)",
+            "DGFT DSC"
+          ],
+          "required": true
+        },
+        {
+          "key": "USB Token Needed",
+          "label": "Cryptographic USB Token",
+          "placeholder": "Select option",
+          "type": "select",
+          "options": [
+            "Yes — New FIPS USB Token Included",
+            "No — Download into My Existing Token"
+          ],
+          "required": true
+        },
+        {
+          "key": "PAN & Firm Name",
+          "label": "Applicant PAN & Firm Name (if Org DSC)",
+          "placeholder": "e.g. ABCDE1234F · Individual / Firm Name",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "active": true,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Nationality",
+        "Proof of National Card",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "id": "req-25226d43",
+      "requestNumber": "SRV-2026-1007",
+      "createdAt": "2026-11-15T16:14:58.985Z",
+      "updatedAt": "2026-11-15T16:14:58.985Z",
+      "status": "payment_submitted",
+      "serviceId": "srv-aadhaar",
+      "serviceName": "Aadhaar Card (Enrollment, Update & Mobile/Address Link)",
+      "serviceCategory": "Identity & Certificates",
+      "processingSpeed": "standard",
+      "customerName": "Verification Test",
+      "customerWhatsapp": "919876543210",
+      "customerEmail": "",
+      "customerAddress": "Test Street",
+      "customerCity": "Kolkata",
+      "customerPostalCode": "",
+      "subjectTitle": "Aadhaar Test",
+      "quantity": 1,
+      "preferredDate": "2026-11-20",
+      "referenceCode": "",
+      "detailedInstructions": "",
+      "customDetails": {},
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Birth",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ],
+      "customerConfirmedDocuments": [],
+      "uploadedDocuments": {},
+      "documentsChecklist": {
+        "Proof of Identity": "pending",
+        "Proof of Address": "pending",
+        "Proof of Birth": "pending",
+        "Applicant Photo (Max 1 MB)": "pending",
+        "Applicant Signature (Max 1 MB)": "pending"
+      },
+      "documentsReviewNote": "",
+      "originalFee": 100,
+      "platformCharge": 20,
+      "platformChargePercent": 20,
+      "expressFee": 0,
+      "totalAmount": 120,
+      "currencySymbol": "₹",
+      "paymentMethod": "upi",
+      "paymentReference": "UTR9988776655",
+      "payerName": "Verification Test",
+      "paymentScreenshot": {
+        "docName": "Payment Transaction Screenshot",
+        "fileName": "2a0ace49-bde9-4d7f-b9c3-6f362f7784e0.png",
+        "originalName": "upi-receipt.png",
+        "mimeType": "image/png",
+        "sizeBytes": 70,
+        "url": "/api/uploads/2a0ace49-bde9-4d7f-b9c3-6f362f7784e0.png",
+        "uploadedAt": "2026-11-15T16:14:58.963Z"
+      },
+      "paymentCompletedAt": "2026-11-15T16:14:58.985Z",
+      "paymentStatus": "pending",
+      "paymentReviewNote": "",
+      "paymentReviewedAt": null,
+      "verification": {
+        "detailsVerified": false,
+        "specsVerified": false,
+        "paymentVerified": false,
+        "verificationNotes": "",
+        "verifiedAt": null,
+        "verifiedBy": null
+      },
+      "physicalProcessing": {
+        "handlerName": "",
+        "deskCounter": "",
+        "expectedCompletion": "",
+        "processingNotes": "",
+        "startedAt": null
+      },
+      "slip": null
+    },
+    {
+      "id": "req-demo-1001",
+      "requestNumber": "SRV-2026-1001",
+      "createdAt": "2026-11-15T09:08:41.443Z",
+      "updatedAt": "2026-11-15T13:23:41.443Z",
+      "status": "slip_issued",
+      "serviceId": "srv-certificates",
+      "serviceName": "Birth, Death, Income, Caste & Residence Certificate",
+      "serviceCategory": "Identity & Certificates",
+      "processingSpeed": "express",
+      "customerName": "Rohan Kulkarni",
+      "customerWhatsapp": "919820112233",
+      "customerEmail": "rohan.k@example.com",
+      "customerAddress": "14 Lotus Residency, MG Road",
+      "customerCity": "Pune",
+      "customerPostalCode": "411001",
+      "subjectTitle": "Income Certificate for College Scholarship",
+      "quantity": 1,
+      "preferredDate": "2026-11-15",
+      "referenceCode": "EDIST-2026-88",
+      "detailedInstructions": "Need signed e-District physical printout with stamp.",
+      "customDetails": {
+        "Certificate Type": "Income Certificate (आय)",
+        "Tehsil / Block": "Haveli Tehsil",
+        "Parent / Spouse Name": "Suresh Kulkarni",
+        "Purpose / Income Figure": "Scholarship · ₹96,000/yr"
+      },
+      "originalFee": 200,
+      "platformCharge": 40,
+      "platformChargePercent": 20,
+      "expressFee": 80,
+      "totalAmount": 320,
+      "currencySymbol": "₹",
+      "paymentMethod": "upi",
+      "paymentReference": "UTR631948201944",
+      "payerName": "Rohan Kulkarni",
+      "paymentCompletedAt": "2026-11-15T09:08:41.443Z",
+      "verification": {
+        "detailsVerified": true,
+        "specsVerified": true,
+        "paymentVerified": true,
+        "verificationNotes": "Original fee ₹200 + 20% platform charge ₹40 + Express ₹80 verified on UPI.",
+        "verifiedAt": "2026-11-15T11:08:41.443Z",
+        "verifiedBy": "Ashraful Desk Operations"
+      },
+      "physicalProcessing": {
+        "handlerName": "Imran S.",
+        "deskCounter": "e-District Counter 2",
+        "expectedCompletion": "2026-11-15",
+        "processingNotes": "e-District portal application filed, attested copy printed & sealed.",
+        "startedAt": "2026-11-15T12:08:41.443Z"
+      },
+      "slip": {
+        "slipNumber": "SLP-2026-4101",
+        "issuedAt": "2026-11-15T13:23:41.443Z",
+        "verificationCode": "VRF-8A4C-91F2",
+        "finalRemarks": "Certificate physically processed, stamped, and ready for pickup / WhatsApp PDF.",
+        "issuedBy": "Ashraful Desk Operations"
+      },
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Birth",
+        "Proof of Caste",
+        "Proof of Income",
+        "Proof of Residence",
+        "Applicant Photo (Max 1 MB)",
+        "Applicant Signature (Max 1 MB)"
+      ],
+      "customerConfirmedDocuments": [
+        "Aadhaar Card & Voter ID of Applicant",
+        "Ration Card / Local Residence Proof",
+        "Self-Declaration / Panchayat or Ward Councillor Certificate",
+        "Salary Slip / Land Record / Hospital Slip (as applicable)"
+      ],
+      "documentsChecklist": {
+        "Proof of Identity": "verified",
+        "Proof of Address": "verified",
+        "Proof of Birth": "verified",
+        "Proof of Caste": "verified",
+        "Proof of Income": "verified",
+        "Proof of Residence": "verified",
+        "Applicant Photo (Max 1 MB)": "verified",
+        "Applicant Signature (Max 1 MB)": "verified"
+      },
+      "documentsReviewNote": "",
+      "paymentStatus": "approved",
+      "paymentReviewNote": "",
+      "paymentReviewedAt": "2026-11-15T11:08:41.443Z",
+      "uploadedDocuments": {}
+    },
+    {
+      "id": "req-demo-1002",
+      "requestNumber": "SRV-2026-1002",
+      "createdAt": "2026-11-15T13:33:41.443Z",
+      "updatedAt": "2026-11-15T13:33:41.443Z",
+      "status": "payment_submitted",
+      "serviceId": "srv-land-records",
+      "serviceName": "Land Records / Banglarbhumi ROR & Mutation",
+      "serviceCategory": "Business & Travel",
+      "processingSpeed": "standard",
+      "customerName": "Ananya Chatterjee",
+      "customerWhatsapp": "919745009988",
+      "customerEmail": "ananya.c@example.com",
+      "customerAddress": "42 Station Para, Barasat",
+      "customerCity": "North 24 Parganas",
+      "customerPostalCode": "700124",
+      "subjectTitle": "Certified Khatian ROR Porcha Copy",
+      "quantity": 2,
+      "preferredDate": "2026-11-16",
+      "referenceCode": "JL-42",
+      "detailedInstructions": "Please provide 2 signed ROR certified copies for bank loan file.",
+      "customDetails": {
+        "Land Record Service": "ROR / Khatian Certified Copy (Porcha)",
+        "District / Block / Mouza": "North 24 Parganas · Barasat · Mouza 42",
+        "Khatian / Plot Number": "Khatian 1042 · Dag 318"
+      },
+      "originalFee": 400,
+      "platformCharge": 80,
+      "platformChargePercent": 20,
+      "expressFee": 0,
+      "totalAmount": 480,
+      "currencySymbol": "₹",
+      "paymentMethod": "upi",
+      "paymentReference": "UTR631955019283",
+      "payerName": "Ananya Chatterjee",
+      "paymentCompletedAt": "2026-11-15T13:33:41.443Z",
+      "verification": {
+        "detailsVerified": false,
+        "specsVerified": false,
+        "paymentVerified": false,
+        "verificationNotes": "",
+        "verifiedAt": null,
+        "verifiedBy": null
+      },
+      "physicalProcessing": {
+        "handlerName": "",
+        "deskCounter": "",
+        "expectedCompletion": "",
+        "processingNotes": "",
+        "startedAt": null
+      },
+      "slip": null,
+      "requiredDocuments": [
+        "Proof of Identity",
+        "Proof of Address",
+        "Proof of Residence",
+        "Applicant Signature (Max 1 MB)"
+      ],
+      "customerConfirmedDocuments": [],
+      "documentsChecklist": {
+        "Proof of Identity": "pending",
+        "Proof of Address": "pending",
+        "Proof of Residence": "pending",
+        "Applicant Signature (Max 1 MB)": "pending"
+      },
+      "documentsReviewNote": "",
+      "paymentStatus": "pending",
+      "paymentReviewNote": "",
+      "paymentReviewedAt": null,
+      "uploadedDocuments": {}
+    }
+  ],
+  "sequenceCounter": 1007,
+  "slipCounter": 4101
+}

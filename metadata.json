@@ -1,0 +1,6 @@
+{
+  "name": "Mr Ashraf Banking Traveling Communication",
+  "description": "Citizen, banking, travel, certificate, and government scheme portal with step-by-step service forms, 20% platform service charge checkout, WhatsApp dispatch, physical processing verification, and official slip generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
